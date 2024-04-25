@@ -2,15 +2,15 @@
 header {
   height: 100px;
   width: 100%;
-  position: fixed;
-  z-index: 2;
 }
 
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
-  position: relative;
   height: 100px;
+  z-index: 2;
+  position: fixed;
+  border-bottom: 1px solid #e7e7e8;
 }
 
 header nav {
@@ -313,7 +313,7 @@ header nav .nav-tools {
 }
 
 header .navigation {
-  transition: top .3s linear 0s;
+  /*transition: top .3s linear 0s;*/
 }
 
 .dropped {
