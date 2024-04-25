@@ -98,6 +98,64 @@ body > main > div.section.vehicle-categories.tabs-container > div > div > .tabs-
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 205px;
 }
+
+.vehicle-categories .tabs-panel > div > div p {
+    max-height: 28%;
+}
+
+.vehicle-categories .tabs-panel > div > div h4 {
+    margin-top: 14%;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.vehicle-categories .tabs-panel > div > div h4 a {
+    color: #1d252c;
+    text-align: center;
+    font: 650 1.29529rem helvetica-neue-75, 'sans-serif';
+    line-height: 26px;
+    padding-bottom: .23529rem;
+    letter-spacing: 0.02rem;
+}
+
+.vehicle-categories .tabs-panel > div > div h5 {
+    margin: 0;
+    text-align: center;
+}
+
+.vehicle-categories .tabs-panel > div > div h5 a {
+    text-align: center;
+    font: 400 .86353rem helvetica-neue-55, 'sans-serif';
+    line-height: 24px;
+    color: #5c6163;
+    letter-spacing: 0.01rem;
+}
+
+.vehicle-categories .tabs-panel > div > div h5 a strong {
+    color: #1d252c;
+    font: bold .82353rem helvetica-neue-75, 'sans-serif';
+}
+
+.vehicle-categories .tabs-panel > div > div h6 {
+    margin: 1% 0 0 0;
+    text-align: center;
+}
+
+.vehicle-categories .tabs-panel > div > div h6 a {
+    text-align: center;
+    font: 400 .70588rem helvetica-neue-65, 'sans-serif';
+    line-height: 17px;
+    letter-spacing: 0.01rem;
+    border: 1px solid #d2d3d3;
+    padding: 0 .29412rem;
+    min-width: 7.35294rem;
+    width: auto;
+    border-radius: 3px;
+    display: inline-block;
+    color: #1d252c;
+}
+
+

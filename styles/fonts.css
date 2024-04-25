@@ -29,6 +29,12 @@
 }
 
 @font-face {
+  font-family: helvetica-neue-75;
+  font-display: swap;
+  src: url('../fonts/HelveticaNeueLTW05-75Bold.woff');
+}
+
+@font-face {
   font-family: 'Open Sans';
   src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
   font-display: swap;

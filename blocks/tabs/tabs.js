@@ -5,6 +5,8 @@ function hasWrapper(el) {
     return !!el.firstElementChild && window.getComputedStyle(el.firstElementChild).display === 'block';
 }
 
+function addEventListeners() {
+}
 function decorateTabsPanels() {
     const panels = document.querySelectorAll('.tabs-panel');
     panels.forEach((panel) => {
@@ -70,6 +72,6 @@ export default async function decorate(block) {
         tab.remove();
     });
     block.prepend(tablist);
-
     decorateTabsPanels();
+    // addEventListeners();
 }
