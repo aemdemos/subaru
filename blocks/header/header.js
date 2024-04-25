@@ -146,4 +146,14 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  block.parentElement.classList.add('navigation');
+  // window.addEventListener('scroll', function() {
+  //   const header = document.querySelector('header');
+  //   if (window.pageYOffset > 100) {
+  //     header.classList.add('dropped');
+  //   } else if (window.pageYOffset === 0) {
+  //     header.classList.remove('dropped');
+  //   }
+  // });
 }
+

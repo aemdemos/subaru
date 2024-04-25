@@ -5,6 +5,26 @@ function hasWrapper(el) {
     return !!el.firstElementChild && window.getComputedStyle(el.firstElementChild).display === 'block';
 }
 
+function decorateTabsPanels() {
+    const panels = document.querySelectorAll('.tabs-panel');
+    panels.forEach((panel) => {
+        const parentDiv = panel.children[0];
+        let newDiv = document.createElement('div');
+        [...parentDiv.children].forEach((child) => {
+            if (child.tagName === 'HR') {
+                child.remove();
+                parentDiv.appendChild(newDiv);
+                newDiv = document.createElement('div');
+            } else {
+                newDiv.appendChild(child);
+            }
+        });
+        if (newDiv) {
+            parentDiv.appendChild(newDiv);
+        }
+    });
+}
+
 export default async function decorate(block) {
     // build tablist
     const tablist = document.createElement('div');
@@ -49,6 +69,7 @@ export default async function decorate(block) {
         tablist.append(button);
         tab.remove();
     });
-
     block.prepend(tablist);
+
+    decorateTabsPanels();
 }

@@ -118,6 +118,7 @@ main pre {
   border-radius: .25em;
   overflow-x: auto;
   white-space: pre;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* links */
@@ -207,4 +208,12 @@ main .section {
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+a {
+  transition: height .3s, width .3s, background .3s, border .3s, color .3s, margin .3s, box-shadow .3s;
+}
+
+header {
+  height: 100px;
 }

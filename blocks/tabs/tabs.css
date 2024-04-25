@@ -44,3 +44,60 @@
 .tabs .tabs-panel[aria-hidden="true"] {
     display: none;
 }
+
+body > main > div.section.vehicle-categories.tabs-container > div > div > div.tabs-list {
+    margin: 0 11%;
+    padding: 0 1%;
+    align-items: center;
+    justify-content: space-between;
+    font: 400 1.1rem helvetica-neue-55, 'sans-serif';
+    border-bottom: 1px solid #b7bcc2;
+
+}
+
+body > main > div.section.vehicle-categories.tabs-container > div > div > div.tabs-list .tabs-tab {
+    border: none;
+    color: #5c6163;
+    background-color: white;
+}
+
+#tab-suvs {
+    margin-left: 5%;
+}
+
+#tab-wilderness {
+    margin-right: 5%;
+}
+
+body > main > div.section.vehicle-categories.tabs-container {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.vehicle-categories .tabs-wrapper {
+    max-width: 100%;
+    padding: 0;
+}
+
+body > main > div.section.vehicle-categories.tabs-container > div > div > .tabs-panel {
+    width: 100%;
+    border: none;
+    max-width: 90%;
+    margin: 2% auto;
+}
+
+.vehicle-categories .tabs-panel > div {
+    display: flex;
+    /*gap: 1rem;*/
+    justify-content: center;
+    column-gap: 5%;
+    max-width: 100%;
+}
+
+.vehicle-categories .tabs-panel > div > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 205px;
+}
