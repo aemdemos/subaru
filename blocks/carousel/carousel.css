@@ -206,3 +206,10 @@ body > main > div.section.vehicle-values.carousel-container > div {
     padding-top: 1rem;
     padding-left: 2rem;
 }
+
+#always-ready-for-adventure {
+    font: 400 4rem helvetica-neue-75, sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
