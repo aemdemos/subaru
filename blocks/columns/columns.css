@@ -122,6 +122,9 @@ body > main > div.section.customer-options.columns-container > div > div > div >
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
+    border-top: 1px solid #e7e7e8;
+    border-right: 1px solid #e7e7e8;
+
 }
 
 body > main > div.section.customer-options.columns-container > div > div > div > div h2 {
