@@ -168,3 +168,18 @@
         --slide-content-width: auto;
     }
 }
+
+body > main > div.section.vehicle-values.carousel-container {
+    padding: 0;
+}
+
+body > main > div.section.vehicle-values.carousel-container > div {
+    margin: 0;
+    max-width: 100%;
+}
+
+#carousel-1 > div > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}

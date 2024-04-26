@@ -6,6 +6,35 @@ function hasWrapper(el) {
 }
 
 function addEventListeners() {
+    const tabs = document.querySelectorAll('.tabs-tab');
+    const defaultTab = document.getElementById("tab-suvs");
+    defaultTab.classList.add("active");
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function() {
+            let oldIndex;
+            tabs.forEach(t => {
+                if (t.classList.contains('active')) {
+                    oldIndex = [...tabs].indexOf(t);
+                }
+                t.classList.remove("active")
+            });
+            tab.classList.add("active");
+            let newIndex = [...tabs].indexOf(tab);
+            document.querySelectorAll('.tabs-panel')[oldIndex].opacity = 0;
+            document.querySelectorAll('.tabs-panel')[newIndex].opacity = 1;
+        });
+    });
+
+    const tabItems = document.querySelectorAll('.vehicle-categories .tabs-panel > div > div');
+    tabItems.forEach(tabItem => {
+        tabItem.onmouseover = function() {
+            tabItems.forEach(t => t.style.opacity = 0.5);
+            tabItem.style.opacity = 1;
+        };
+        tabItem.onmouseout = function() {
+            tabItems.forEach(t => t.style.opacity = 1);
+        };
+    });
 }
 function decorateTabsPanels() {
     const panels = document.querySelectorAll('.tabs-panel');
@@ -73,5 +102,5 @@ export default async function decorate(block) {
     });
     block.prepend(tablist);
     decorateTabsPanels();
-    // addEventListeners();
+    addEventListeners();
 }

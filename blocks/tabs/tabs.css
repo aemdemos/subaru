@@ -1,10 +1,3 @@
-.tabs .tabs-list {
-    display: flex;
-    gap: 8px;
-    max-width: 100%;
-    overflow-x: auto;
-}
-
 .tabs .tabs-list button {
     flex: 0 0 max-content;
     margin: 0;
@@ -26,7 +19,6 @@
 .tabs .tabs-list button[aria-selected="true"] {
     border-bottom: 1px solid var(--background-color);
     background-color: var(--background-color);
-    cursor: initial;
 }
 
 .tabs .tabs-list button[aria-selected="false"]:hover,
@@ -46,27 +38,33 @@
 }
 
 body > main > div.section.vehicle-categories.tabs-container > div > div > div.tabs-list {
+    display: flex;
+    max-width: 100%;
+    overflow-x: auto;
     margin: 0 11%;
-    padding: 0 1%;
     align-items: center;
-    justify-content: space-between;
     font: 400 1.1rem helvetica-neue-55, 'sans-serif';
     border-bottom: 1px solid #b7bcc2;
-
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
 }
 
 body > main > div.section.vehicle-categories.tabs-container > div > div > div.tabs-list .tabs-tab {
+    min-width: 20%;
+    text-align: center;
     border: none;
     color: #5c6163;
     background-color: white;
 }
 
-#tab-suvs {
-    margin-left: 5%;
+.tabs-tab:hover p {
+    color: black;
 }
 
-#tab-wilderness {
-    margin-right: 5%;
+body > main > div.section.vehicle-categories.tabs-container > div > div > div.tabs-list .tabs-tab.active {
+    color: black;
+    border-bottom: 0.2rem solid black;
 }
 
 body > main > div.section.vehicle-categories.tabs-container {
@@ -84,6 +82,7 @@ body > main > div.section.vehicle-categories.tabs-container > div > div > .tabs-
     border: none;
     max-width: 90%;
     margin: 2% auto;
+    transition: aria-hidden 0.5s ease;
 }
 
 .vehicle-categories .tabs-panel > div {
@@ -100,6 +99,7 @@ body > main > div.section.vehicle-categories.tabs-container > div > div > .tabs-
     flex-direction: column;
     justify-content: flex-start;
     max-width: 205px;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .vehicle-categories .tabs-panel > div > div p {

@@ -118,7 +118,6 @@ main pre {
   border-radius: .25em;
   overflow-x: auto;
   white-space: pre;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* links */
@@ -211,9 +210,21 @@ main .section.highlight {
 }
 
 a {
+  color: #1971d4;
+  font-family: HelveticaNeueLTW05-65Medium, Helvetica Neue, -apple-system, Open Sans, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 27px;
   transition: height .3s, width .3s, background .3s, border .3s, color .3s, margin .3s, box-shadow .3s;
 }
 
 header {
   height: 100px;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+main {
+  -webkit-font-smoothing: antialiased;
 }
