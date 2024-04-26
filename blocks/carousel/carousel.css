@@ -178,8 +178,31 @@ body > main > div.section.vehicle-values.carousel-container > div {
     max-width: 100%;
 }
 
-#carousel-1 > div > ul > li {
+.vehicle-values div > ul > li {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.vehicle-values div.carousel-slide-content > h2 {
+    font: bold 4.1rem helvetica-neue-75, sans-serif;
+    padding: 1rem 2rem 1rem;
+    line-height: 1.5rem;
+}
+
+.vehicle-values div.carousel-slide-content > p:nth-child(2) {
+    font: 400 1.1rem helvetica-neue-55, sans-serif;
+    padding-right: 12%;
+    line-height: 1.5rem;
+    padding-left: 2rem;
+}
+
+.vehicle-values div.carousel-slide-content > p.button-container > strong > a {
+    border-radius: 0;
+    background: transparent;
+    color: #3a8eee;
+    text-align: left;
+    font: 600 1rem helvetica-neue-65, sans-serif;
+    padding-top: 1rem;
+    padding-left: 2rem;
 }
