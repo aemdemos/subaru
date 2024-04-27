@@ -155,7 +155,7 @@ window.addEventListener('scroll', () => {
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
-  return rect.top <= window.scrollY;
+  return rect.top <= (window.scrollY - 10);
 }
 
 function animateElementsInView() {
