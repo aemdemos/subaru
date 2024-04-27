@@ -274,3 +274,8 @@ main {
   }
 }
 
+body > main > div:nth-child(7).section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
