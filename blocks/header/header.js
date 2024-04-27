@@ -147,13 +147,21 @@ export default async function decorate(block) {
   navWrapper.append(nav);
   block.append(navWrapper);
   block.parentElement.classList.add('navigation');
-  // window.addEventListener('scroll', function() {
-  //   const header = document.querySelector('header');
-  //   if (window.pageYOffset > 100) {
-  //     header.classList.add('dropped');
-  //   } else if (window.pageYOffset === 0) {
-  //     header.classList.remove('dropped');
-  //   }
-  // });
+
+  const vehicles = document.querySelector('#nav > div.section.nav-sections > div > ul > li:nth-child(1)');
+  vehicles.addEventListener('click', () => {
+    const vehicleCategories = document.querySelector('.vehicle-categories');
+    var targetOffset = vehicleCategories.offsetTop - 130;
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth'
+    });
+  });
+
+  const logo = document.querySelector('.nav-brand img');
+  logo.style.cursor = 'pointer';
+  logo.addEventListener('click', function() {
+    location.reload();
+  });
 }
 

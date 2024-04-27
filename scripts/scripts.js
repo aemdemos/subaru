@@ -133,3 +133,48 @@ async function loadPage() {
 }
 
 loadPage();
+
+window.addEventListener('scroll', () => {
+  const animatedElements = document.querySelectorAll('.animated-element');
+  animatedElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (elementTop < windowHeight * 0.96) {
+      element.classList.add('animate');
+    }
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const animatedElements = document.querySelectorAll('.animated-element');
+  animatedElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (elementTop < windowHeight * 0.96) {
+      element.classList.add('animate');
+    }
+  });
+});
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function animateElementsInView() {
+  const animatedElements = document.querySelectorAll('.animated-element');
+  animatedElements.forEach(element => {
+    if (isInViewport(element)) {
+      element.classList.add('animate');
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  // animateElementsInView();
+});

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+    <g id="chat" transform="translate(0.24 -0.324)">
+        <path id="Path_836" data-name="Path 836" d="M10.042,17.284l-.889-.511L11.2,13.2h3.066a1.022,1.022,0,0,0,1.022-1.022V6.044a1.022,1.022,0,0,0-1.022-1.022H4.044A1.022,1.022,0,0,0,3.022,6.044v6.131A1.022,1.022,0,0,0,4.044,13.2h4.6v1.022h-4.6A2.044,2.044,0,0,1,2,12.175V6.044A2.044,2.044,0,0,1,4.044,4H14.262a2.044,2.044,0,0,1,2.044,2.044v6.131a2.044,2.044,0,0,1-2.044,2.044H11.789Z" transform="translate(-1.298 -1.709)" fill="#fff"/>
+        <rect id="Rectangle_498" data-name="Rectangle 498" width="8" height="1" transform="translate(3.76 5.324)" fill="#fff"/>
+        <rect id="Rectangle_499" data-name="Rectangle 499" width="5" height="1" transform="translate(3.76 8.324)" fill="#fff"/>
+        <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" width="16" height="16" transform="translate(-0.24 0.324)" fill="none"/>
+    </g>
+</svg>

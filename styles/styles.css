@@ -41,6 +41,10 @@
   --nav-height: 64px;
 }
 
+html {
+  font-size: 17px;
+}
+
 @font-face {
   font-family: roboto-fallback;
   size-adjust: 100.06%;
@@ -127,7 +131,7 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: var(--link-hover-color);
 }
 
@@ -209,11 +213,8 @@ main .section.highlight {
   background-color: var(--light-color);
 }
 
-a {
-  color: #1971d4;
-  font-family: HelveticaNeueLTW05-65Medium, Helvetica Neue, -apple-system, Open Sans, Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 27px;
+a:hover {
+  color: #1971d4 !important;
   transition: height .3s, width .3s, background .3s, border .3s, color .3s, margin .3s, box-shadow .3s;
 }
 
@@ -228,3 +229,32 @@ header {
 main {
   -webkit-font-smoothing: antialiased;
 }
+
+.animated-element {
+  opacity: 0;
+}
+
+.animate {
+  animation: scroll-fadein 0.8s ease 0s 1 forwards;
+}
+
+
+@keyframes scroll-fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(25px)
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide-left {
+  animation: open-list-slide-left .2s ease-out 0s 1 forwards;
+}
+

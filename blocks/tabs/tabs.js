@@ -6,22 +6,32 @@ function hasWrapper(el) {
 }
 
 function addEventListeners() {
+    const tabsWrapper = document.querySelector('body > main > div.section.vehicle-categories.tabs-container > div');
+    tabsWrapper.classList.add('animated-element');
     const tabs = document.querySelectorAll('.tabs-tab');
+    const panels = document.querySelectorAll('.tabs-panel');
     const defaultTab = document.getElementById("tab-suvs");
     defaultTab.classList.add("active");
-    tabs.forEach(tab => {
+    panels[0].classList.add("active-panel");
+    panels.forEach((panel, index) => {
+        if (index !== 0)
+            panel.classList.add("inactive-panel");
+    });
+    tabs.forEach((tab, index) => {
         tab.addEventListener("click", function() {
             let oldIndex;
             tabs.forEach(t => {
-                if (t.classList.contains('active')) {
-                    oldIndex = [...tabs].indexOf(t);
+                t.classList.remove("active");
+            });
+            panels.forEach((panel, index) => {
+                if (panel.classList.contains("active-panel")) {
+                    panel.classList.remove("active-panel");
+                    panel.classList.add("inactive-panel");
                 }
-                t.classList.remove("active")
             });
             tab.classList.add("active");
-            let newIndex = [...tabs].indexOf(tab);
-            document.querySelectorAll('.tabs-panel')[oldIndex].opacity = 0;
-            document.querySelectorAll('.tabs-panel')[newIndex].opacity = 1;
+            panels[index].classList.remove('inactive-panel');
+            panels[index].classList.add('active-panel');
         });
     });
 
@@ -35,6 +45,9 @@ function addEventListeners() {
             tabItems.forEach(t => t.style.opacity = 1);
         };
     });
+
+    // const
+
 }
 function decorateTabsPanels() {
     const panels = document.querySelectorAll('.tabs-panel');

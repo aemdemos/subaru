@@ -1,14 +1,194 @@
 footer {
-  padding: 2rem;
   background-color: var(--light-color);
   font-size: var(--body-font-size-s);
 }
 
 footer .footer {
-  max-width: 1200px;
-  margin: auto;
 }
 
 footer .footer p {
   margin: 0;
+}
+
+.footer-top {
+  width: 100%;
+  background-color: #1d252c;
+  color: #fff;
+  margin: 0;
+  padding: 0 0 0.05%;
+}
+
+.footer-top h1 {
+  font: bold 3.55rem helvetica-neue-75, 'sans-serif';
+  letter-spacing: 0.02rem;
+  margin-top: 3%;
+}
+
+.footer-top h2 {
+  font: normal 1.3rem helvetica-neue-65, 'sans-serif';
+}
+
+.footer-top p {
+  display: inline-block;
+  font: lighter 0.82rem helvetica-neue-55, 'sans-serif';
+  line-height: 1.4rem;
+  padding-right: 14%;
+}
+
+.footer-top.columns-container > div.columns-wrapper {
+  margin: 0;
+  width: 100%;
+  max-width: unset;
+}
+
+.footer-top.columns-container > div.columns-wrapper > div {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  gap: 10%;
+  margin: 3% 5% 2%;
+  text-align: left;
+}
+
+.footer-top.columns-container > div.columns-wrapper > div > div {
+  width: 20%;
+  max-width: 20%;
+}
+
+.footer-top.columns-container > div.columns-wrapper > div > div:nth-child(2) {
+  padding-right: 2%;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.columns-wrapper > div > div:nth-child(2) > div > p {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 7% 0 5%;
+  text-align: left;
+  gap: 8%;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.columns-wrapper > div > div:nth-child(2) > div > p:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 10% 0 10%;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.columns-wrapper > div > div:nth-child(2) > div > p {
+  color: #c1c9cc;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.columns-wrapper > div > div > div > p a{
+  background-color: transparent;
+  padding-left: 0;
+  padding-top: 1%;
+  margin: 0;
+  white-space: wrap;
+  text-align: left;
+  border: none;
+  border-radius: 0;
+  font: lighter 0.82rem helvetica-neue-55, 'sans-serif';
+  color: #c1c9cc;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.default-content-wrapper {
+  max-width: unset;
+  display: flex;
+  justify-content: center;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.default-content-wrapper > p {
+  display: block;
+  width: 5.5%;
+  padding: 1.5%;
+  background-color: white;
+  position: relative;
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.default-content-wrapper > p:hover {
+  background-color: #1971d4;
+  cursor: pointer;
+}
+
+
+body > footer > div > div > div.section.footer-top.columns-container > div.default-content-wrapper > p > span:before {
+  content: "";
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  width: 13px;
+  height: 13px;
+  border: solid #1d252c;
+  border-width: 2px 0 0 2px;
+  transform: translate(6.5px, 8.5px) rotate(45deg);
+}
+
+body > footer > div > div > div.section.footer-top.columns-container > div.default-content-wrapper > p > span > img {
+  opacity: 0;
+}
+
+.footer-middle {
+  width: 100%;
+  background-color: #1d252c;
+  color: #fff;
+  margin: 0;
+  padding: 3% 0;
+  border-top: 1px solid #3e434d;
+}
+
+body > footer > div > div > div.section.footer-middle.column-container > div {
+  max-width: unset;
+  margin: 0;
+}
+
+body > footer > div > div > div.section.footer-middle.column-container > div > div > div {
+  display: flex;
+  margin: 0 5%;
+  justify-content: space-between;
+  font: normal 0.825rem helvetica-neue-55, 'sans-serif' !important;
+}
+
+body > footer > div > div > div.section.footer-middle.column-container > div > div > div > div:nth-child(2) {
+  width: 35%;
+  text-align: right;
+  letter-spacing: 0.02rem;
+  word-spacing: 0.15rem;
+  line-height: 1.5rem !important;
+}
+
+body > footer > div > div > div.section.footer-middle.column-container > div > div > div > div:nth-child(1) a {
+  text-decoration: underline;
+}
+
+body > footer > div > div > div.section.footer-middle.column-container > div > div > div > div:nth-child(1) {
+  width: 45%;
+  text-align: left;
+  line-height: 1.5rem !important;
+}
+
+body > footer > div > div > div.section.footer-middle.column-container > div > div > div a {
+  color: #c1c9cc;
+  font: normal 0.8rem helvetica-neue-55, 'sans-serif' !important;
+}
+
+.footer-bottom {
+  width: 100%;
+  background-color: white;
+  padding: 2.5% 5% 1.8%;
+  color: #5c6163;
+  font: normal 0.825rem helvetica-neue-55, 'sans-serif';
+  line-height: 1.4rem;
+}
+
+.footer-bottom > div.default-content-wrapper {
+  max-width: unset !important;
+}
+
+.footer-bottom > div.default-content-wrapper p {
+  margin-bottom: 1.5%;
+}
+
+footer a:hover {
+  color: #1971d4 !important;
 }
