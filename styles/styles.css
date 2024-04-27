@@ -258,3 +258,19 @@ main {
   animation: open-list-slide-left .2s ease-out 0s 1 forwards;
 }
 
+.header-slide-down {
+  position: fixed !important;
+  width: 100%;
+  animation: slide-down 0.5s linear 0s 1 forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+

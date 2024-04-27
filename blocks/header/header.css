@@ -9,8 +9,9 @@ header .nav-wrapper {
   width: 100%;
   height: 100px;
   z-index: 20;
-  position: fixed;
+  position: relative;
   border-bottom: 1px solid #e7e7e8;
+  transition: transform .6s cubic-bezier(.42,0,.32,1.02) 0s;
 }
 
 header nav {
@@ -330,8 +331,8 @@ header .navigation {
 
 .dropped {
   position: fixed;
-  /*top: 0;*/
-  /*transition: top .6s cubic-bezier(.42,0,.32,1.02) 0s;*/
+  top: 0;
+  transition: top .6s cubic-bezier(.42,0,.32,1.02) 0s;
   width: 100%;
   z-index: 11;
 }
