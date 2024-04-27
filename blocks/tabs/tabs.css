@@ -64,7 +64,7 @@ body > main > div.section.vehicle-categories.tabs-container > div > div > div.ta
 
 body > main > div.section.vehicle-categories.tabs-container > div > div > div.tabs-list .tabs-tab.active {
     color: black;
-    border-bottom: 0.2rem solid black;
+    /*border-bottom: 0.2rem solid black;*/
 }
 
 body > main > div.section.vehicle-categories.tabs-container {
@@ -174,6 +174,14 @@ body > main > div.section.vehicle-categories.tabs-container > div > div {
     to {
         opacity: 1
     }
+}
+
+.tabs-navigator {
+    background: #1d252c;
+    position: absolute;
+    transition: transform .75s, width .75s;
+    z-index: 10;
+    border-bottom: 0.2rem solid black;
 }
 
 

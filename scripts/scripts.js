@@ -145,17 +145,17 @@ window.addEventListener('scroll', () => {
   });
 
   const header = document.querySelector('header .nav-wrapper');
-  if (window.scrollY > 100) {
+  if (header && window.scrollY > 100) {
     header.classList.add('header-slide-down');
   }
-  if (window.scrollY === 0) {
+  if (header && window.scrollY === 0) {
     header.classList.remove('header-slide-down');
   }
 });
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
-  return rect.bottom >= window.scrollY;
+  return rect.top <= window.scrollY;
 }
 
 function animateElementsInView() {
@@ -168,5 +168,5 @@ function animateElementsInView() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // animateElementsInView();
+  animateElementsInView();
 });

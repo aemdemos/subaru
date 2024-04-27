@@ -9,6 +9,7 @@ function addEventListeners() {
     const tabsWrapper = document.querySelector('body > main > div.section.vehicle-categories.tabs-container > div');
     tabsWrapper.classList.add('animated-element');
     const tabs = document.querySelectorAll('.tabs-tab');
+    // navigator.style.width = tabs[0].clientWidth + 'px';
     const panels = document.querySelectorAll('.tabs-panel');
     const defaultTab = document.getElementById("tab-suvs");
     defaultTab.classList.add("active");
@@ -19,7 +20,9 @@ function addEventListeners() {
     });
     tabs.forEach((tab, index) => {
         tab.addEventListener("click", function() {
-            let oldIndex;
+            const navigator = document.querySelector('.tabs-navigator');
+            const offset = index * tab.clientWidth;
+            navigator.style.transform= `translateX(${offset}px)`;
             tabs.forEach(t => {
                 t.classList.remove("active");
             });
@@ -45,10 +48,22 @@ function addEventListeners() {
             tabItems.forEach(t => t.style.opacity = 1);
         };
     });
-
-    // const
-
+    setTimeout(addNavigator, 10);
 }
+
+function addNavigator() {
+    const tabsList = document.querySelector('.tabs-list');
+    if (tabsList.clientHeight === 0) {
+        setTimeout(addNavigator, 10);
+        return;
+    }
+    const navigator = document.createElement('div');
+    navigator.classList.add('tabs-navigator');
+    navigator.style.top = `${tabsList.clientHeight - 1}px`;
+    navigator.style.width = `${tabsList.children[0].clientWidth}px`;
+    tabsList.appendChild(navigator);
+}
+
 function decorateTabsPanels() {
     const panels = document.querySelectorAll('.tabs-panel');
     panels.forEach((panel) => {
