@@ -172,5 +172,10 @@ export default async function decorate(block) {
       });
     }
   });
+
+  const items = document.querySelectorAll('#nav > div.section.nav-sections > div > ul > li');
+  items.forEach((item) => {
+    item.removeAttribute('role');
+  });
 }
 
