@@ -163,5 +163,14 @@ export default async function decorate(block) {
   logo.addEventListener('click', function() {
     location.reload();
   });
+
+  const navItems = document.querySelectorAll('#nav > div.section.nav-sections > div > ul > li > ul');
+  navItems.forEach((navItem, index) => {
+    if ([2,3,4].includes(index)) {
+      navItem.addEventListener('click', () => {
+        navItem.classList.add('container-open');
+      });
+    }
+  });
 }
 

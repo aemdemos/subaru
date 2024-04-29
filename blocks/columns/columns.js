@@ -38,6 +38,11 @@ function handleEvents() {
     lists.onmouseout = () => {
         lists.children[0].classList.add('navigation_003__kpi--hover');
     }
+
+    const anchors = document.querySelectorAll('.customer-options a');
+    anchors.forEach((anchor, index) => {
+       anchor.href = `https://www.subaru.com${new URL(anchor.href).pathname}`;
+    });
 }
 
 let flagReports = true;
