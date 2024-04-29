@@ -127,8 +127,8 @@ export default async function decorate(block) {
         const slideNavButtons = document.createElement('div');
         slideNavButtons.classList.add('hero-carousel-navigation-buttons');
         slideNavButtons.innerHTML = `
-      <button type="button" class= "slide-prev" aria-label="${null || 'Previous Slide'}"></button>
-      <button type="button" class="slide-next" aria-label="${null || 'Next Slide'}"></button>
+      <button type="button" class= "slide-prev" aria-label="Previous Slide"></button>
+      <button type="button" class="slide-next" aria-label="Next Slide"></button>
     `;
 
         container.append(slideNavButtons);
@@ -159,7 +159,6 @@ export default async function decorate(block) {
     herocar.forEach((slide) => {
         slide.removeAttribute('id');
     });
-    setTimeout(slidesRotator, 5000);
     const slideImage = document.querySelectorAll('.hero-carousel-slide-content img');
     slideImage.forEach((slide) => {
         slide.classList.add('animate');
@@ -168,6 +167,7 @@ export default async function decorate(block) {
     slideContents.forEach((slide) => {
         slide.classList.add('animate');
     });
+    // setTimeout(slidesRotator, 5000);
 }
 
 function slidesRotator() {
