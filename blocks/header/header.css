@@ -292,7 +292,7 @@ header nav .nav-tools {
 }
 
 #nav > div.section.nav-sections > div > ul > li {
-  font: 410 1.05rem helvetica-neue-55, 'sans-serif';
+  font: 410 0.98rem helvetica-neue-65, 'sans-serif';
   line-height: 23px;
   /*letter-spacing: 0.001em;*/
 }
