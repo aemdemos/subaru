@@ -41,6 +41,10 @@
   --nav-height: 64px;
 }
 
+html {
+  font-size: 17px;
+}
+
 @font-face {
   font-family: roboto-fallback;
   size-adjust: 100.06%;
@@ -127,7 +131,7 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: var(--link-hover-color);
 }
 
@@ -208,3 +212,70 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
+a:hover {
+  color: #1971d4 !important;
+  transition: height .3s, width .3s, background .3s, border .3s, color .3s, margin .3s, box-shadow .3s;
+}
+
+header {
+  height: 100px;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+main {
+  -webkit-font-smoothing: antialiased;
+}
+
+.animated-element {
+  opacity: 0;
+}
+
+.animate {
+  animation: scroll-fadein 0.8s ease 0.1s 1 forwards;
+}
+
+
+@keyframes scroll-fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(25px)
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.slide-left {
+  animation: open-list-slide-left .2s ease-out 0s 1 forwards;
+}
+
+.header-slide-down {
+  position: fixed !important;
+  width: 100%;
+  animation: slide-down 0.5s linear 0s 1 forwards;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%)
+  }
+
+  to {
+    transform: translateY(0)
+  }
+}
+
+body > main > div:nth-child(7).section {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+

@@ -146,4 +146,31 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+  block.parentElement.classList.add('navigation');
+
+  const vehicles = document.querySelector('#nav > div.section.nav-sections > div > ul > li:nth-child(1)');
+  vehicles.addEventListener('click', () => {
+    const vehicleCategories = document.querySelector('.vehicle-categories');
+    var targetOffset = vehicleCategories.offsetTop - 130;
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth'
+    });
+  });
+
+  const logo = document.querySelector('.nav-brand img');
+  logo.style.cursor = 'pointer';
+  logo.addEventListener('click', function() {
+    location.reload();
+  });
+
+  const navItems = document.querySelectorAll('#nav > div.section.nav-sections > div > ul > li > ul');
+  navItems.forEach((navItem, index) => {
+    if ([2,3,4].includes(index)) {
+      navItem.addEventListener('click', () => {
+        navItem.classList.add('container-open');
+      });
+    }
+  });
 }
+

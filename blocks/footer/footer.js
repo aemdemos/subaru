@@ -17,4 +17,9 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
 
   block.append(footer);
+
+  const moveToTopIcon = document.querySelector('body > footer > div > div > div.section.footer-top.columns-container > div.default-content-wrapper > p');
+  moveToTopIcon.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 }

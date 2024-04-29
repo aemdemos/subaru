@@ -15,3 +15,28 @@
   src: url('../fonts/roboto-regular.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
+@font-face {
+  font-family: helvetica-neue-55;
+  font-display: swap;
+  src: url('../fonts/HelveticaNeueLTW05-55Roman.woff');
+}
+
+@font-face {
+  font-family: helvetica-neue-65;
+  font-display: swap;
+  src: url('../fonts/HelveticaNeueLTW05-65Medium.woff');
+}
+
+@font-face {
+  font-family: helvetica-neue-75;
+  font-display: swap;
+  src: url('../fonts/HelveticaNeueLTW05-75Bold.woff');
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/fonts/OpenSans-VariableFont_wdth,wght.ttf");
+  font-display: swap;
+}
+

@@ -133,3 +133,41 @@ async function loadPage() {
 }
 
 loadPage();
+
+window.addEventListener('scroll', () => {
+  const animatedElements = document.querySelectorAll('.animated-element');
+  animatedElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (elementTop < windowHeight * 0.96 && !element.classList.contains('animate')) {
+      console.log('animated' + element.classList);
+      element.classList.add('animate');
+    }
+  });
+
+  const header = document.querySelector('header .nav-wrapper');
+  if (header && window.scrollY > 100) {
+    header.classList.add('header-slide-down');
+  }
+  if (header && window.scrollY === 0) {
+    header.classList.remove('header-slide-down');
+  }
+});
+
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return rect.top < window.innerHeight;
+}
+
+function animateElementsInView() {
+  const animatedElements = document.querySelectorAll('.animated-element');
+  animatedElements.forEach(element => {
+    if (isInViewport(element) && !element.classList.contains('animate')) {
+      element.classList.add('animate');
+    }
+  });
+}
+
+window.addEventListener('load', () => {
+  setTimeout(animateElementsInView, 500);
+});
