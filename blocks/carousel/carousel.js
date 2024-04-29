@@ -186,7 +186,6 @@ function customHandling() {
     reasonsDiv.innerText = 'Reasons to love';
     const contentUl = document.createElement('div');
     contentUl.classList.add('carousel-slide-content-wrapper');
-    contentUl.classList.add('animated-element');
     carouselSlideContent.forEach((content, index) => {
         content.classList.add('carousel-slide-content');
         if (index === 0) {
@@ -230,6 +229,12 @@ function customHandling() {
 }
 
 function handleEvents() {
+
+    const contents = document.querySelectorAll('#carousel-1 > div > div.carousel-slide-content-section > div.carousel-slide-content-wrapper > div.carousel-slide-content > *');
+    contents.forEach((content) => {
+       content.classList.add('animated-element');
+    });
+
     const navButtons = document.querySelectorAll('.carousel-navigation-buttons button');
     navButtons[1].addEventListener('click', () => {
         const images = document.querySelectorAll('.carousel-slide-images li');

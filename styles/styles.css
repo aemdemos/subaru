@@ -235,7 +235,7 @@ main {
 }
 
 .animate {
-  animation: scroll-fadein 0.8s ease 0s 1 forwards;
+  animation: scroll-fadein 0.8s ease 0.3s 1 forwards;
 }
 
 
