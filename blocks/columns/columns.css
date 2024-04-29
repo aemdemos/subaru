@@ -41,6 +41,7 @@ body > main > div.section.customer-reports.columns-container > div > div > div >
   background-color: #1d252c;
   color: white;
   padding: 6% 4%;
+  width: 50%;
   max-width: 50%;
 }
 

@@ -139,7 +139,8 @@ window.addEventListener('scroll', () => {
   animatedElements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
-    if (elementTop < windowHeight * 0.96) {
+    if (elementTop < windowHeight * 0.96 && !element.classList.contains('animate')) {
+      console.log('animated' + element.classList);
       element.classList.add('animate');
     }
   });
@@ -155,18 +156,18 @@ window.addEventListener('scroll', () => {
 
 function isInViewport(element) {
   const rect = element.getBoundingClientRect();
-  return rect.top <= (window.scrollY - 10);
+  return rect.top < window.innerHeight;
 }
 
 function animateElementsInView() {
   const animatedElements = document.querySelectorAll('.animated-element');
   animatedElements.forEach(element => {
-    if (isInViewport(element)) {
+    if (isInViewport(element) && !element.classList.contains('animate')) {
       element.classList.add('animate');
     }
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  animateElementsInView();
+window.addEventListener('load', () => {
+  setTimeout(animateElementsInView, 500);
 });

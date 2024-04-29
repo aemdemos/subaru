@@ -185,8 +185,8 @@ body > main > div.section.vehicle-values.carousel-container > div {
     opacity: 1 !important;
 }
 
-.activeContent {
-
+.carousel-slide-indicators {
+    display: none !important;
 }
 
 .vehicle-values .carousel-slide-image-section li > div {
@@ -274,7 +274,7 @@ body > main > div.section.vehicle-values.carousel-container > div {
 }
 
 .vehicle-values .carousel-slide-content-reasons {
-    margin: 8% 11% 5%;
+    margin: 9% 11% 5%;
     font: 400 0.83rem helvetica-neue-65, sans-serif;
     color: #b7bcc2;
 }
@@ -298,6 +298,7 @@ body > main > div.section.vehicle-values.carousel-container > div {
     max-height: 2.4rem;
     /*max-width: 12%;*/
     overflow: hidden;
+    margin-top: 5%;
     margin-bottom: 10%;
 }
 

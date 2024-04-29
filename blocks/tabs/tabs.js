@@ -49,6 +49,7 @@ function addEventListeners() {
         };
     });
     setTimeout(addNavigator, 10);
+    tabsWrapper.classList.add('animate');
 }
 
 function addNavigator() {
