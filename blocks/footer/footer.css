@@ -137,19 +137,20 @@ body > footer > div > div > div.section.footer-top.columns-container > div.defau
   border-top: 1px solid #3e434d;
 }
 
-body > footer > div > div > div.section.footer-middle.column-container > div {
+body > footer > div > div > div.section.footer-middle.columns-container > div {
   max-width: unset;
   margin: 0;
 }
 
-body > footer > div > div > div.section.footer-middle.column-container > div > div > div {
+body > footer > div > div > div.section.footer-middle.columns-container > div > div > div {
   display: flex;
   margin: 0 5%;
   justify-content: space-between;
   font: normal 0.825rem helvetica-neue-55, 'sans-serif' !important;
+  flex-direction: row;
 }
 
-body > footer > div > div > div.section.footer-middle.column-container > div > div > div > div:nth-child(2) {
+body > footer > div > div > div.section.footer-middle.columns-container > div > div > div > div:nth-child(2) {
   width: 35%;
   text-align: right;
   letter-spacing: 0.02rem;
@@ -157,17 +158,17 @@ body > footer > div > div > div.section.footer-middle.column-container > div > d
   line-height: 1.5rem !important;
 }
 
-body > footer > div > div > div.section.footer-middle.column-container > div > div > div > div:nth-child(1) a {
+body > footer > div > div > div.section.footer-middle.columns-container > div > div > div > div:nth-child(1) a {
   text-decoration: underline;
 }
 
-body > footer > div > div > div.section.footer-middle.column-container > div > div > div > div:nth-child(1) {
+body > footer > div > div > div.section.footer-middle.columns-container > div > div > div > div:nth-child(1) {
   width: 45%;
   text-align: left;
   line-height: 1.5rem !important;
 }
 
-body > footer > div > div > div.section.footer-middle.column-container > div > div > div a {
+body > footer > div > div > div.section.footer-middle.columns-container > div > div > div a {
   color: #c1c9cc;
   font: normal 0.8rem helvetica-neue-55, 'sans-serif' !important;
 }

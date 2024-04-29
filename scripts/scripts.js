@@ -140,7 +140,6 @@ window.addEventListener('scroll', () => {
     const elementTop = element.getBoundingClientRect().top;
     const windowHeight = window.innerHeight;
     if (elementTop < windowHeight * 0.96 && !element.classList.contains('animate')) {
-      console.log('animated' + element.classList);
       element.classList.add('animate');
     }
   });
